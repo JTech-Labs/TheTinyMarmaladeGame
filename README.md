@@ -5,7 +5,7 @@ This is a small project made for [`The Tiny Marmalade Company`](https://thetinym
 There is a lot of technology used to make this game. We try to use as much FOSS technology as possible, so other people can use the same technology we do to make their own wonderful projects. Here is a list of what we use:
  - [`Raylib`](https://github.com/raysan5/raylib): Main library for Graphics and Programing
  - `C`: The progaming language this was built with
- - [`Blender`](https://blender.org): The software used for all the 3D assets/animations.
+ - [`Blender`](https://blender.org): The software used for all the 3D assets/animations
 
 ## Building
 For building the project refer to [`BUILDING.md`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/blob/master/BUILDING.md).
