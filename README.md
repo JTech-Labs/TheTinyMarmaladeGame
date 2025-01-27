@@ -2,13 +2,13 @@
 This is a small project made for [`The Tiny Marmalade Company`](https://thetinymarmalade.com), as a love letter to all they do. It is a fun cosy yet sometimes overweling game inspired by the process of getting all of the compnay's delicious produce into those cute little jars.
 
 ## Technology
-There is a lot of technology used in this game and to make it. We try to use as much FOSS technology as possible. Here is a list of what we use:
+There is a lot of technology used to make this game. We try to use as much FOSS technology as possible, so other people can use the same technology we do to make their own wonderful projects. Here is a list of what we use:
  - [`Raylib`](https://github.com/raysan5/raylib): Main library for Graphics and Programing
  - `C`: The progaming language this was built with
  - [`Blender`](https://blender.org): The software used for all the 3D assets/animations.
 
 ## Building
-For building refer to [`BUILDING.md`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/blob/master/BUILDING.md)
+For building the project refer to [`BUILDING.md`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/blob/master/BUILDING.md).
 
 ## Licensing
 This game is made out of several components, each with their own licences, please refer to the list below:
