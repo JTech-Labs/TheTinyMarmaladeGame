@@ -10,7 +10,7 @@ There is a lot of technology used in this game and to make it. We try to use as 
 ## Building
 For building refer to [`BUILDING.md`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/blob/master/BUILDING.md)
 
-## Licence
+## Licensing
 This game is made out of several components, each with their own licences, please refer to the list below:
  - Raylib ([Repo](github.com/raysan5/raylib) - [LICENCE](https://github.com/raysan5/raylib/blob/master/LICENSE))
  - Raylib Quickstart ([Repo](https://github.com/raylib-extras/raylib-quickstart) - [LICENCE](https://github.com/raylib-extras/raylib-quickstart?tab=readme-ov-file#license))
