@@ -20,4 +20,5 @@ This game is made out of several components, each with their own licences, pleas
 ---
 ---
 (c) 2025 JTech-Labs
+
 All assets CC BY-NC 4.0
