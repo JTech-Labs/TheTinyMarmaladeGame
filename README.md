@@ -1,5 +1,5 @@
 # The Tiny Marmalade Game
-This is a small project made for [`The Tiny Marmalade Company`](https://thetinymarmalade.com), as a love letter to all they do. It is a fun cosy yet sometimes overweling game inspired by the process of getting all of the compnay's delicious produce into those cute little jars.
+This is a small project made for [`The Tiny Marmalade Company`](https://thetinymarmalade.com), as a love letter to all they do. It is a fun, cosy yet sometimes overweling game inspired by the process of getting all of the compnay's delicious produce into those cute little jars.
 
 ## Technology
 There is a lot of technology used to make this game. We try to use as much FOSS technology as possible, so other people can use the same technology we do to make their own wonderful projects. Here is a list of what we use:
