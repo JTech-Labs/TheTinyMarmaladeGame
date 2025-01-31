@@ -8,8 +8,8 @@ There is a lot of technology used to make this game. We try to use as much FOSS 
  - [`Blender`](https://blender.org): The software used for all the 3D assets/animations
  - [`Arch Linux`](https://archlinux.org): The Operating System this project was build in
  - [`NeoVim`](https://neovim.io): The primary code editor used to make this project
- - [`VSCodium`](https://vscodium.com/): The secondary code editor used to make this project
- - [`Premake`](https://premake.github.io/): The tool to configure the builds and build systems
+ - [`VSCodium`](https://vscodium.com): The secondary code editor used to make this project
+ - [`Premake`](https://premake.github.io): The tool to configure the builds and build systems
 
 ## Building
 For building the project refer to [`BUILDING.md`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/blob/master/BUILDING.md).
