@@ -1,5 +1,5 @@
 # Building
-This project is made with the Raylib library all in pure C. The basis for this project is based on [raylib-extras/raylib-quickstart](https://github.com/raylib-extras/raylib-quickstart), so all of the code related to compiling is under that same licence (check the `Licence` section of this file). Premake is used to generate all the build files. Check the instructions below to compile the game.
+This project is made with the Raylib library all in pure C. The basis for this project is based on [raylib-extras/raylib-quickstart](https://github.com/raylib-extras/raylib-quickstart), so all of the code related to compiling is under that same licence (check the [`Licence`](#Licence) section of this file). Premake is used to generate all the build files. Check the instructions below to compile the game.
 
 ## Supported Platforms
 The compiler configuration supports the main 3 desktop platforms:
