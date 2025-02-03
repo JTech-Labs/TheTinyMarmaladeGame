@@ -11,10 +11,12 @@ You should have received a copy of the GNU General Public License along with The
 */
 
 #include "raylib.h"
-
+#include "args.c"
 // #include "include/resource_dir.h"	// utility header for SearchAndSetResourceDir (part of the raylib-quickstart template)
 
-int main() {
+int main(int argc, char *argv[]) {
 
+	theArgs(argc, argv);
+	
 	return 0;
 }

@@ -1,5 +1,8 @@
 # Building
-This project is made with the Raylib library all in pure C. The basis for this project is based on [raylib-extras/raylib-quickstart](https://github.com/raylib-extras/raylib-quickstart), so all of the code related to compiling is under that same licence (check the [`License`](#License) section of this file). Premake is used to generate all the build files. Check the instructions below to compile the game.
+This project is made with the Raylib library all in pure C. The basis for this project is based on [raylib-extras/raylib-quickstart](https://github.com/raylib-extras/raylib-quickstart), so all of the code related to compiling is under that same licence (check the [`License`](#License) section of this file). Premake is used to generate all the build files. Check the instructions below to compile the game. There are precompiled Windows and Linux binaries in the [`Releases`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/releases) page.
+
+### MacOS
+We are not currenty compiling MacOS versions as we do not have enough money to pay for a commercial Apple Developer account and we also don't have a Mac; however, you are still allowed to compile the source code on your own (if you have the means). Just remember that the [`main`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/tree/main) branch is the stable one and the [`indev`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/tree/indev) branch is unstable. Have fun!
 
 ## Supported Platforms
 The compiler configuration supports the main 3 desktop platforms:
@@ -36,7 +39,7 @@ Make sure you have added the path
 
 To your path environment variable so that the compiler that came with raylib can be found.
 
-DO NOT INSTALL ANOTHER MinGW-W64 from another source such as msys2, you don't need it.
+**_DO NOT_ INSTALL ANOTHER MinGW-W64 from another source such as msys2, you don't need it.**
 
 ## Microsoft Visual Studio
 * Run `build-VisualStudio2022.bat`
@@ -59,7 +62,7 @@ DO NOT INSTALL ANOTHER MinGW-W64 from another source such as msys2, you don't ne
 * you are good to go
 
 # Output files
-The built code will be in the bin dir
+The built code will be in the `bin/` directory.
 
 # Working directories and the resources folder
 The example uses a utility function from `path_utils.h` that will find the resources dir and set it as the current working directory. This is very useful when starting out. If you wish to manage your own working directory you can simply remove the call to the function and the header.

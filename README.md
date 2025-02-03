@@ -16,8 +16,8 @@ For building the project refer to [`BUILDING.md`](BUILDING.md).
 
 ## Licensing
 This game is made out of several components, each with their own licences, please refer to the list below:
- - Raylib ([Repo](https://github.com/raysan5/raylib) - [LICENCE](https://github.com/raysan5/raylib/blob/master/LICENSE))
- - Raylib Quickstart ([Repo](https://github.com/raylib-extras/raylib-quickstart) - [LICENCE](https://github.com/raylib-extras/raylib-quickstart?tab=readme-ov-file#license))
+ - Raylib ([`Repo`](https://github.com/raysan5/raylib) - [`LICENCE`](https://github.com/raysan5/raylib/blob/master/LICENSE))
+ - Raylib Quickstart ([`Repo`](https://github.com/raylib-extras/raylib-quickstart) - [`LICENCE`](https://github.com/raylib-extras/raylib-quickstart?tab=readme-ov-file#license))
  - The rest of the code for this game is livenced under the [`GNU General Public Licene - Version 3.0`](https://www.gnu.org/licenses/gpl-3.0.en.html)
  - All the assets used are under [`Creative Commons BY-NC 4.0`](https://creativecommons.org/licenses/by-nc/4.0/), these can be found in the [`Assests`](assets/) Folder
 
