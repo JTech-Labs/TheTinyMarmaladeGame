@@ -1,91 +1,79 @@
 # Building
-This project is made with the Raylib library all in pure C. The basis for this project is based on [raylib-extras/raylib-quickstart](https://github.com/raylib-extras/raylib-quickstart), so all of the code related to compiling is under that same licence (check the [`License`](#License) section of this file). Premake is used to generate all the build files. Check the instructions below to compile the game. There are precompiled Windows and Linux binaries in the [`Releases`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/releases) page.
+This game is available for purchase on [Itch,io](https://itch.io) and [Steam](https://store.steampowered.com). As per the [`GNU General Public Licene - Version 3.0`](https://www.gnu.org/licenses/gpl-3.0.en.html), you are allowed to see the source code, and thus you may compile it for yourself if you wish.
 
-### MacOS
-We are not currenty compiling MacOS versions as we do not have enough money to pay for a commercial Apple Developer account and we also don't have a Mac; however, you are still allowed to compile the source code on your own (if you have the means). Just remember that the [`main`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/tree/main) branch is the stable one and the [`indev`](https://github.com/JTech-Labs/TheTinyMarmaladeGame/tree/indev) branch is unstable. Have fun!
+This project is made with the [`raylib`](https://github.com/raysan5/raylib) all in pure C. This project uses [`raylib-quickstart`](https://github.com/raylib-extras/raylib-quickstart) as a template for the build system, which uses [`premake`](https://premake.github.io/) to genreate the build configurations (e.g. [`GNU make`](https://www.gnu.org/software/make/) or [`Microsoft Visual Studio`](https://visualstudio.microsoft.com/)). Please go check out both the [`raylib`](https://github.com/raysan5/raylib) and [`raylib-quickstart`](https://github.com/raylib-extras/raylib-quickstart). You can currently buy the game on [Itch.io](https://itch.io). If you wish to compile the game yourself, you can do so with the instructions below.
 
 ## Supported Platforms
-The compiler configuration supports the main 3 desktop platforms:
-* Windows
-* Linux
-* MacOS
+The compiler configurations support the three main desktop platforms:
+- GNU+Linux
+- Windows
+- MacOS
 
-# VSCode Users (all platforms)
-*Note* You must have a compiler toolchain installed in addition to vscode.
+# Compiling
+You must download the source code eaither by doing a `git pull` on this repository or download the `.zip` or `.tar.gz` of the source code.
 
-* Download the quickstart
-* Rename the folder to your game name
-* Open the folder in VSCode
-* Press F5 to build
-* You are good to go
+## VScode/codium (all platforms)
+*Note* You must have a compiler toolchain installed in addition to VScode/codium, if you don't know how to setup one, follow the intructions for your specific Operating System.
 
-# Windows Users
-There are two compiler toolchains available for windows, MinGW-W64 (a free compiler using GCC), and Microsoft Visual Studio
-## Using MinGW-W64
-* Double click the `build-MinGW-W64.bat` file
-* CD into the folder in your terminal
-* run `make`
-* You are good to go
+- Open the folder in VScode/codium
+- Press `F5` to build
+- You are good to go
 
-### Note on MinGW-64 versions
-Make sure you have a modern version of MinGW-W64 (not mingw).
-The best place to get it is from the W64devkit from
-https://github.com/skeeto/w64devkit/releases
-or the version installed with the raylib installer
-#### If you have installed raylib from the installer
+## Linux
+- Change directory into the `build/` folder
+- Run `./premake5 gmake2` (it might give you a warning to use `gmake` instead of `gmake2`, don't worry about it)
+- If you are compiling for aarch64 (like a Raspberry Pi), use `./premake5rpi gmake2` instead
+- Change directory back to the root of the project
+- Run `make`
+- You are good to go
+
+If you have any problems making, type `make help`, there are instructions for release or debug versions and different CPU architectures.
+
+## Windows
+There are two compiler toolchains avaiable for windows: MinGW-w64 (a free compiler using GCC), and Microsoft visual studio.
+
+## MinGW-w64
+Make sure you have a modern version of MinGW-w64 (not mingw).
+The best place to get it is from the [`264devkit`](https://github.com/skeeto/w64devkit) repo releases or the verion installed with the raylib installer.
+
+### If you have intalled raylib from the installer
 Make sure you have added the path
 
 `C:\raylib\w64devkit\bin`
 
 To your path environment variable so that the compiler that came with raylib can be found.
 
-**_DO NOT_ INSTALL ANOTHER MinGW-W64 from another source such as msys2, you don't need it.**
+**_DO NOT_ INSTALL ANOTHER MinGW-w64 from another source such as msys2, you don't need it**
 
-## Microsoft Visual Studio
-* Run `build-VisualStudio2022.bat`
-* double click the `.sln` file that is generated
-* develop your game
-* you are good to go
+### How to use MinGW-w64
+- Double click the `build-MinGW-W64.bat` file
+- Change directory into the project root folder in your terminal (`cmd` or `powershell`)
+- run `make`
+- You are good to go
 
-# Linux Users
-* CD into the build folder
-* run `./premake5 gmake2`
-* CD back to the root
-* run `make`
-* you are good to go
+## MacOS
+We do not provide precompiled versions for MacOS as we would need a (very expensice) modern Macintosh and an (also very expensive) Apple comercial developer account, which we cannot afford at this point. However, you can always use compatibiliy software if you wish. You can also compile the source yourself if you can be bothered and wish to.
 
-# MacOS Users
-* CD into the build folder
-* run `./premake5.osx gmake2`
-* CD back to the root
-* run `make`
-* you are good to go
+### How to compile on MacOS
+- Change Direcctory into the `build/` folder
+- Run `./premake5.osx gmake2`
+- Change directory back into the project's root
+- Run `make`
+- You are good to go
 
 # Output files
 The built code will be in the `bin/` directory.
 
-# Working directories and the resources folder
-The example uses a utility function from `path_utils.h` that will find the resources dir and set it as the current working directory. This is very useful when starting out. If you wish to manage your own working directory you can simply remove the call to the function and the header.
+# More
+If you want more information, you can run
 
-# Building for other OpenGL targets
-If you need to build for a different OpenGL version than the default (OpenGL 3.3) you can specify an OpenGL version in your premake command line. Just modify the bat file or add the following to your command line
+`make help`
 
-## For OpenGL 1.1
-`--graphics=opengl11`
+Which will give you more information on OpenGL targets and architecture targets.
 
-## For OpenGL 2.1
-`--graphics=opengl21`
+# Licence
+Here is the licence for the original compilation system. Also check out the [`raylib-quickstart`](https://github.com/raylib-extras/raylib-quickstart) repo
 
-## For OpenGL 4.3
-`--graphics=opengl43`
-
-## For OpenGLES 2.0
-`--graphics=opengles2`
-
-## For OpenGLES 3.0
-`--graphics=opengles3`
-
-# License
 Copyright (c) 2020-2024 Jeffery Myers
 
 This software is provided "as-is", without any express or implied warranty. In no event 
