@@ -1,5 +1,5 @@
 # Building
-This game is available for purchase on [Itch,io](https://itch.io) and [Steam](https://store.steampowered.com). As per the [`GNU General Public Licene - Version 3.0`](https://www.gnu.org/licenses/gpl-3.0.en.html), you are allowed to see the source code, and thus you may compile it for yourself if you wish.
+This game is available for purchase on [Itch.io](https://itch.io) and [Steam](https://store.steampowered.com). As per the [`GNU General Public Licene - Version 3.0`](https://www.gnu.org/licenses/gpl-3.0.en.html), you are allowed to see the source code, and thus you may compile it for yourself if you wish.
 
 This project is made with the [`raylib`](https://github.com/raysan5/raylib) all in pure C. This project uses [`raylib-quickstart`](https://github.com/raylib-extras/raylib-quickstart) as a template for the build system, which uses [`premake`](https://premake.github.io/) to genreate the build configurations (e.g. [`GNU make`](https://www.gnu.org/software/make/) or [`Microsoft Visual Studio`](https://visualstudio.microsoft.com/)). Please go check out both the [`raylib`](https://github.com/raysan5/raylib) and [`raylib-quickstart`](https://github.com/raylib-extras/raylib-quickstart). You can currently buy the game on [Itch.io](https://itch.io). If you wish to compile the game yourself, you can do so with the instructions below.
 
