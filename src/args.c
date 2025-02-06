@@ -20,6 +20,8 @@ You should have received a copy of the GNU General Public License along with The
 #include "baseCommands.h"
 
 int theArgs(int argc, char *argv[]) {
+  /* The following is only for the purpose of explaining how the system works
+  
   // Print the number of arguments passed to the program
   printf("Number of arguments: %d\n", argc);
   // Print each argument
@@ -27,17 +29,21 @@ int theArgs(int argc, char *argv[]) {
     printf("Argument %d: %s\n", i, argv[i]);
   }
   // Parse command-line options
+  */
+  
   int opt;
-  int flag = 0;
+  int flag = 1; // Do not require any arguments to run
   while ((opt = getopt(argc, argv, "hf:")) != -1) {
     switch (opt) {
-      case 'h':
-        printf("Usage: %s [-h] [-f filename]\n", argv[0]);
-        printf("  -h           Display this help message\n");
-        printf("  -f filename  Specify a file to process\n");
+      case 'h': // Help
+        printf("The Tiny Marmalade Game by JTech-Labs.\n\n");
+        printf("Usage: %s [-h] [-p <???>]\n", argv[0]);
+        printf("            Run the game normally\n");
+        printf("  -h        Display this help message\n");
+        printf("  -p <???>  Specify a file to process\n");
         exit(EXIT_SUCCESS);
-      case 'f':
-        printf("Opening file: %s\n", optarg);
+      case 'p':
+        printf("Currently nothing: %s\n", optarg);
         flag = 1;
       break;
       case '?':
@@ -48,6 +54,9 @@ int theArgs(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
  }
+
+ /* IDK what this does but we don't need it - Imma keep it here just in case tho
+  
  // Check for positional arguments
  if (optind < argc) {
    printf("Positional arguments:\n");
@@ -55,11 +64,12 @@ int theArgs(int argc, char *argv[]) {
      printf(" %s\n", argv[i]);
    }
  }
- // Check for missing required options
+ */
+  
+ // Check for missing required options // Currently none
  if (flag == 0) {
-   fprintf(stderr, "Error: Missing required option -f\n");
+   fprintf(stderr, "Error: Missing required option <opt>\n");
    exit(EXIT_FAILURE);
  }
- // Program logic here
  return 0;
 }
