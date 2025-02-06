@@ -90,7 +90,7 @@ end
 downloadRaylib = true
 raylib_dir = "external/raylib-master"
 
-workspaceName = 'MyGame'
+workspaceName = 'TheTinyMarmaladeGame'
 baseName = path.getbasename(path.getdirectory(os.getcwd()));
 
 --if (baseName ~= 'raylib-quickstart') then
