@@ -21,7 +21,7 @@ You should have received a copy of the GNU General Public License along with The
 
 //Import our own headers for functions from different files
 #include "baseCommands.h"
-// #include "include/resource_dir.h"	// utility header for SearchAndSetResourceDir (part of the raylib-quickstart template)
+// #include "include/resourceDir.h"	// utility header for SearchAndSetResourceDir (part of the raylib-quickstart template)
 
 // The all important main function
 int main(int argc, char *argv[]) {
