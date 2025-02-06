@@ -10,13 +10,24 @@ You should have received a copy of the GNU General Public License along with The
 (c) 2025 JTech-Labs
 */
 
+// Include all the base libraries
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+// Include the **very** important raylib library
 #include "raylib.h"
-#include "args.c"
+
+//Import our own headers for functions from different files
+#include "baseCommands.h"
 // #include "include/resource_dir.h"	// utility header for SearchAndSetResourceDir (part of the raylib-quickstart template)
 
+// The all important main function
 int main(int argc, char *argv[]) {
 
 	theArgs(argc, argv);
-	
+
+	// Return with no errors unless previously stated otherwise
 	return 0;
 }
