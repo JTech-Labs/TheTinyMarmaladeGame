@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License along with The
 #include <unistd.h>
 
 // The header where the `theArgs` function is called from
-#include "theCommands.h"
+#include "baseCommands.h"
 
 int theArgs(int argc, char *argv[]) {
   // Print the number of arguments passed to the program
