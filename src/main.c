@@ -20,14 +20,18 @@ You should have received a copy of the GNU General Public License along with The
 #include "raylib.h"
 
 //Import our own headers for functions from different files
-#include "baseCommands.h"
-// #include "include/resourceDir.h"	// utility header for SearchAndSetResourceDir (part of the raylib-quickstart template)
+#include "include/baseCommands.h"
+#include "include/resourceDir.h"	// utility header for SearchAndSetResourceDir (part of the raylib-quickstart template)
 
 // The all important main function
 int main(int argc, char *argv[]) {
 
+	// Run the command line parameters, if none are received, continue as normal
 	theArgs(argc, argv);
 
+	printf("Starting...\n");
+	printf("\n===============\n\n");
+	
 	// Return with no errors unless previously stated otherwise
 	return 0;
 }
