@@ -9,7 +9,7 @@ There is a lot of technology used to make this game. We try to use as much Free 
  - [`Arch Linux`](https://archlinux.org): The Operating System this project was build in
  - [`NeoVim`](https://neovim.io): The primary code editor used to make this project
  - [`VSCodium`](https://vscodium.com): The secondary code editor used to make this project
- - [`Premake`](https://premake.github.io): The tool to configure the builds and build systems\
+ - [`Premake`](https://premake.github.io): The tool to configure the builds and build systems
 
 ## Building
 For building the project refer to [`BUILDING.md`](BUILDING.md).
