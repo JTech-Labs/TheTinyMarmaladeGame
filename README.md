@@ -10,6 +10,8 @@ There is a lot of technology used to make this game. We try to use as much Free 
  - [`NeoVim`](https://neovim.io): The primary code editor used to make this project
  - [`VSCodium`](https://vscodium.com): The secondary code editor used to make this project
  - [`Premake`](https://premake.github.io): The tool to configure the builds and build systems
+ - [`Git`](https://git-scm.com): Version Control System
+ - [`GitHub`](https://guthib.com): Online Git synchronisation and colaboration service
 
 ## Building
 For building the project refer to [`BUILDING.md`](BUILDING.md).
