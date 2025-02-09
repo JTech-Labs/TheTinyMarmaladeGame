@@ -21,7 +21,7 @@ This game is made out of several components, each with their own licences, pleas
  - The rest of the code for this game is livenced under the [`GNU General Public Licene - Version 3.0`](https://www.gnu.org/licenses/gpl-3.0.en.html)
  - All the assets used are under [`Creative Commons BY-NC 4.0`](https://creativecommons.org/licenses/by-nc/4.0/), these can be found in the [`Assests`](assets/) Folder
 
----
+
 ---
 (c) 2025 JTech-Labs
 
