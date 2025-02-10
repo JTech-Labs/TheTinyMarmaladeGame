@@ -45,6 +45,8 @@ int theArgs(int argc, char *argv[]) {
       case 'p':
         printf("Currently nothing: %s\n", optarg);
         flag = 1;
+      case 'j':
+        pintf("JAI | TECH");
       break;
       case '?':
         fprintf(stderr, "Unknown option: %c\n", optopt);
