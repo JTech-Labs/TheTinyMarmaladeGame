@@ -38,7 +38,7 @@ There are two compiler toolchains avaiable for windows: MinGW-w64 (a free compil
 
 ### MinGW-w64
 Make sure you have a modern version of MinGW-w64 (not mingw).
-The best place to get it is from the [`264devkit`](https://github.com/skeeto/w64devkit) repo releases or the verion installed with the raylib installer.
+The best place to get it is from the [`w64devkit`](https://github.com/skeeto/w64devkit) repo releases or the verion installed with the raylib installer.
 
 #### If you have intalled raylib from the installer
 Make sure you have added the path
