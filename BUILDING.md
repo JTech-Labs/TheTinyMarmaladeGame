@@ -20,6 +20,10 @@ You must download the source code eaither by doing a `git pull` on this reposito
 - You are good to go
 
 ## Linux
+All GNU+Linux distributions work (**NOTE**: You will need the GNU corelibs to be able to compile the game).
+Please check and install the GNU+Linux [dependencies](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux#dependencies) before you compile.
+
+### Instructions
 - Change directory into the `build/` folder
 - Run `./premake5 gmake2` (it might give you a warning to use `gmake` instead of `gmake2`, don't worry about it)
 - If you are compiling for aarch64 (like a Raspberry Pi), use `./premake5rpi gmake2` instead
@@ -32,11 +36,11 @@ If you have any problems making, type `make help`, there are instructions for re
 ## Windows
 There are two compiler toolchains avaiable for windows: MinGW-w64 (a free compiler using GCC), and Microsoft visual studio.
 
-## MinGW-w64
+### MinGW-w64
 Make sure you have a modern version of MinGW-w64 (not mingw).
 The best place to get it is from the [`264devkit`](https://github.com/skeeto/w64devkit) repo releases or the verion installed with the raylib installer.
 
-### If you have intalled raylib from the installer
+#### If you have intalled raylib from the installer
 Make sure you have added the path
 
 `C:\raylib\w64devkit\bin`
@@ -45,7 +49,7 @@ To your path environment variable so that the compiler that came with raylib can
 
 **_DO NOT_ INSTALL ANOTHER MinGW-w64 from another source such as msys2, you don't need it**
 
-### How to use MinGW-w64
+#### How to use MinGW-w64
 - Double click the `build-MinGW-W64.bat` file
 - Change directory into the project root folder in your terminal (`cmd` or `powershell`)
 - run `make`
