@@ -69,7 +69,7 @@ We do not provide precompiled versions for MacOS as we would need a (very expens
 The built code will be in the `bin/` directory.
 
 # More
-If you want more information, you can run
+If you want more information, you can run:
 
 `make help`
 
