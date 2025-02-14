@@ -2,7 +2,7 @@
 This is a small project made for [`The Tiny Marmalade Company`](https://thetinymarmalade.com), as a love letter to all they do. It is a fun, cosy yet often thrilling and exciting game inspired by the hard work the company puts into making all of their delicious product and putting them in those qute little jars.
 
 ## Technology
-There is a lot of technology used to make this game. We try to use as much Free and Oopen Source Software as possible, so other people can use the same technology we do to make their own wonderful projects, and to demonstrate that not much is needed to make something good (or even brilliant). Here is a list of what we use:
+There is a lot of technology used to make this game. We try to use as much Free and Open Source Software as possible, so other people can use the same technology we do to make their own wonderful projects, and to demonstrate that not much is needed to make something good (or even something __*fantastic*__). Here is a list of what we use:
  - [`Raylib`](https://github.com/raysan5/raylib): Main library for Graphics and Programing
  - [`C`](https://en.wikipedia.org/wiki/C_(programming_language)): The progaming language this was built with
  - [`Blender`](https://blender.org): The software used for all the 3D assets/animations
