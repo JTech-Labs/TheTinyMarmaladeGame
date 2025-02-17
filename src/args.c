@@ -40,13 +40,16 @@ int theArgs(int argc, char *argv[]) {
         printf("Usage: %s [-h] [-p <?>]\n", argv[0]);
         printf("            Run the game normally\n");
         printf("  -h        Display this help message\n");
-        printf("  -p <?>  Specify a file to process\n");
+        printf("  -t        Something cool\n");
+        printf("  -p <?>    Specify a file to process\n");
         exit(EXIT_SUCCESS);
       case 'p':
         printf("Currently nothing: %s\n", optarg);
         flag = 1;
       case 'j':
         printf("JAI | TECH");
+      case 't':
+        pointRend();
       break;
       case '?':
         fprintf(stderr, "Unknown option: %c\n", optopt);
@@ -66,6 +69,7 @@ int theArgs(int argc, char *argv[]) {
      printf(" %s\n", argv[i]);
    }
  }
+ 
  */
   
  // Check for missing required options // Currently none

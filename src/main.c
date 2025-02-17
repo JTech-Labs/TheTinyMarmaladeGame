@@ -23,7 +23,7 @@ You should have received a copy of the GNU General Public License along with The
 #include "../include/baseCommands.h"
 #include "../include/resourceDir.h"	// utility header for SearchAndSetResourceDir (part of the raylib-quickstart template)
 
-// The all important main function
+/// The all important main function
 int main(int argc, char *argv[]) {
 
 	/// Startup
@@ -50,20 +50,45 @@ int main(int argc, char *argv[]) {
 
 	SetTargetFPS(60);
 
+	// Textures
+	Texture2D wabbit = LoadTexture("images/wabbitAlpha.png");
+
+	// Models
+	Model initTable = LoadModel("assets/models/glb-gltf/initTable.glb");
+
+
+	// Define the camera to look into the 3d world
+	Camera menuCamera = { 0 };
+	menuCamera.position = (Vector3){ 0.0f,30.0f,-0.0f};
+	menuCamera.target = (Vector3){0.0f,0.0f,0.0f};
+	menuCamera.up = (Vector3){0.0f,0.0f,0.0f,};
+	menuCamera.fovy = 60.0f;
+	menuCamera.projection = CAMERA_PERSPECTIVE;
+
 
 
 	while (!exitWindow) {
 
-		//// Update
+		/// Manage Scene
 
-		///
+
+
+		/// Update
+
+		// Exit manager
 		if (WindowShouldClose() || IsKeyPressed(KEY_ESCAPE)) exitWindowReq = true;
 
 		if (exitWindowReq) {
 
-			if (IsKeyPressed(KEY_Y) || WindowShouldClose()) exitWindow = true;
+			if (IsKeyPressed(KEY_Y)) exitWindow = true;
 			else if (IsKeyPressed(KEY_N)) exitWindowReq = false;
 		}
+
+		// Camera
+
+		UpdateCamera(&menuCamera, CAMERA_FIRST_PERSON);
+
+
 		/// Draw
 		BeginDrawing();
 
@@ -71,13 +96,26 @@ int main(int argc, char *argv[]) {
 			
 			DrawText("We are working!", 500, 500, 35, BLACK);
 
+			BeginMode3D(menuCamera);
+				
+				DrawModel(initTable, (Vector3){0.0f,0.0f,0.0f}, 1.0f, BLUE);
+
+			EndMode3D();
+
+			// Exit manager
 			if (exitWindowReq) {
-				DrawRectangle(0, 100, screenWidth, 200, BLACK);
-				DrawText("Are you sure you want to exit? [Y/N]", 40, 180, 30, WHITE);
+				DrawRectangle(0, (screenHeight/10)*2, screenWidth, (screenHeight/10)*6, BLACK);
+				DrawText("Are you sure you want to exit? [Y/N]", 40, screenHeight/2, 30, WHITE);
+				
 			}
 
 		EndDrawing();
 	}
+
+
+	/// Cleanup
+	UnloadTexture(wabbit);
+	UnloadModel(initTable);
 
 	// Return with no errors unless previously stated otherwise
 	return 0;
