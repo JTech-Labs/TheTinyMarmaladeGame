@@ -1,5 +1,5 @@
 /*
-This is the main file for The Tiny Marmalade Game.
+This is the args file for The Tiny Marmalade Game.
 Please see the README.md file that should have been distributed with this source code (it is probably in the root of the project).
 
 This file is part of The Tiny Marmalade Game.
@@ -13,12 +13,12 @@ You should have received a copy of the GNU General Public License along with The
 // Headers
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
 
 // The header where the `theArgs` function is called from
-#include "baseCommands.h"
+#include "../include/baseCommands.h"
 
+/// Function to manage command line arguments
 int theArgs(int argc, char *argv[]) {
   /* The following is only for the purpose of explaining how the system works
   
@@ -37,16 +37,16 @@ int theArgs(int argc, char *argv[]) {
     switch (opt) {
       case 'h': // Help
         printf("The Tiny Marmalade Game by JTech-Labs.\n\n");
-        printf("Usage: %s [-h] [-p <???>]\n", argv[0]);
+        printf("Usage: %s [-h] [-p <?>]\n", argv[0]);
         printf("            Run the game normally\n");
         printf("  -h        Display this help message\n");
-        printf("  -p <???>  Specify a file to process\n");
+        printf("  -p <?>  Specify a file to process\n");
         exit(EXIT_SUCCESS);
       case 'p':
         printf("Currently nothing: %s\n", optarg);
         flag = 1;
       case 'j':
-        pintf("JAI | TECH");
+        printf("JAI | TECH");
       break;
       case '?':
         fprintf(stderr, "Unknown option: %c\n", optopt);
