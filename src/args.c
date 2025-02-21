@@ -43,20 +43,25 @@ int theArgs(int argc, char *argv[]) {
         printf("  -t        Something cool\n");
         printf("  -p <?>    Specify a file to process\n");
         exit(EXIT_SUCCESS);
+        break;
       case 'p':
         printf("Currently nothing: %s\n", optarg);
         flag = 1;
+        break;
       case 'j':
         printf("JAI | TECH");
+        break;
       case 't':
         pointRend();
-      break;
+        break;
       case '?':
         fprintf(stderr, "Unknown option: %c\n", optopt);
         exit(EXIT_FAILURE);
+        break;
      default:
         fprintf(stderr, "Error parsing options\n");
         exit(EXIT_FAILURE);
+        break;
     }
  }
 

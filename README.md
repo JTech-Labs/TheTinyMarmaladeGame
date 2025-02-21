@@ -16,6 +16,9 @@ There is a lot of technology used to make this game. We try to use as much Free 
 ## Building
 For building the project refer to [`BUILDING.md`](BUILDING.md).
 
+## Development Status
+The game is currently still in its first alpha stages, starting out as a simple 2D game before moving onto a more enjoyable 3D experience. Look out for version 0.1.0!
+
 ## Licensing
 This game is made out of several components, each with their own licences, please refer to the list below:
  - Raylib ([`Repo`](https://github.com/raysan5/raylib) - [`LICENCE`](https://github.com/raysan5/raylib/blob/master/LICENSE))
