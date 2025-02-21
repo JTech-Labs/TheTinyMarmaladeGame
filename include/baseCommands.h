@@ -19,4 +19,8 @@ extern int theArgs(int argc, char *argv[]);
 
 extern int pointRend();
 
+extern int GetDisplayWidth();
+extern int GetDisplayHeight();
+extern void ToggleFullscreenWindow(int windowWidth, int windowHeight);
+
 #endif

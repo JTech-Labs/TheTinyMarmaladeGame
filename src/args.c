@@ -33,7 +33,7 @@ int theArgs(int argc, char *argv[]) {
   
   int opt;
   int flag = 1; // Do not require any arguments to run
-  while ((opt = getopt(argc, argv, "hf:")) != -1) {
+  while ((opt = getopt(argc, argv, "hpjt:")) != -1) {
     switch (opt) {
       case 'h': // Help
         printf("The Tiny Marmalade Game by JTech-Labs.\n\n");
@@ -46,11 +46,11 @@ int theArgs(int argc, char *argv[]) {
         break;
       case 'p':
         printf("Currently nothing: %s\n", optarg);
-        flag = 1;
+        // flag = 1;
         break;
       case 'j':
         printf("JAI | TECH");
-        break;
+        exit(EXIT_SUCCESS);
       case 't':
         pointRend();
         break;

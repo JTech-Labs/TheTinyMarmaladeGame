@@ -36,22 +36,40 @@ int main(int argc, char *argv[]) {
 	/// Initialisation
 
 	SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
-	SearchAndSetResourceDir("assets");
+	SearchAndSetResourceDir("assets/images");
 
 	// Init variables
-	const int screenWidth = 1080;
-	const int screenHeight = 720;
+	const int screenWidth = 1920;
+	const int screenHeight = 1080;
+
+	
 	char gameTitle[] = "The Tiny Marmalade Game";
 	bool exitWindow = false;
 	bool exitWindowReq = false;
 
 	InitWindow(screenWidth, screenHeight, gameTitle);
 
+	ToggleFullscreenWindow(screenWidth, screenHeight);
+
 	SetTargetFPS(60);
 
-	// Textures
-	Texture2D wabbit = LoadTexture("images/wabbitAlpha.png");
+	Image icon = LoadImage("ttm.png");
+	SetWindowIcon(icon);
 
+	// Textures
+	
+	// Wabbit
+	Texture2D wabbit = LoadTexture("wabbitAlpha.png");
+	
+	// The background
+	Image backgroundImage = LoadImage("background.png");
+	Texture2D background = LoadTextureFromImage(backgroundImage);
+	UnloadImage(backgroundImage);
+
+	// Marmalade jar
+	Image jarImage = LoadImage("jar.png");
+	Texture2D jar = LoadTextureFromImage(jarImage);
+	UnloadImage(jarImage);
 
 	while (!exitWindow) {
 
@@ -62,7 +80,7 @@ int main(int argc, char *argv[]) {
 		/// Update
 
 		// Exit manager 
-		if (WindowShouldClose()) exitWindowReq = true;
+		if (WindowShouldClose() && !IsKeyPressed(KEY_ESCAPE)) exitWindowReq = true;
 
 		WaitTime(0.01);
 		
@@ -70,6 +88,7 @@ int main(int argc, char *argv[]) {
 
 			if (IsKeyReleased(KEY_Y)) exitWindow = true;
 			else if (IsKeyReleased(KEY_N) || IsKeyReleased(KEY_ESCAPE)) exitWindowReq = false;
+			else if (IsKeyPressed(KEY_F)) { exitWindowReq = false; ToggleFullscreenWindow(screenWidth, screenHeight); }
 		}
 
 
@@ -78,12 +97,13 @@ int main(int argc, char *argv[]) {
 
 			ClearBackground(WHITE);
 			
-			DrawText("We are working!", 500, 500, 35, BLACK);
+			DrawTexture(jar, GetDisplayWidth()/2 - jar.width/2, GetDisplayHeight()/2 - jar.height/2, WHITE);
+			DrawTexture(background, 0, 0, WHITE);
 
 			// Exit manager
 			if (exitWindowReq) {
-				DrawRectangle(0, (screenHeight/10)*2, screenWidth, (screenHeight/10)*6, BLACK);
-				DrawText("Are you sure you want to exit? [Y/N]", 40, screenHeight/2, 30, WHITE);
+				DrawRectangle(0, (GetDisplayHeight()/10)*2, GetDisplayWidth(), (GetDisplayHeight()/10)*6, BLACK);
+				DrawText("Are you sure you want to exit? [Y/N]", 40, (GetDisplayHeight()/2)-(GetDisplayHeight()/20), 30, WHITE);
 				
 			}
 
@@ -93,6 +113,8 @@ int main(int argc, char *argv[]) {
 
 	/// Cleanup
 	UnloadTexture(wabbit);
+	UnloadTexture(background);
+	UnloadImage(icon);
 
 	// Return with no errors unless previously stated otherwise
 	return 0;
