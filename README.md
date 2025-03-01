@@ -12,6 +12,8 @@ There is a lot of technology used to make this game. We try to use as much Free 
  - [___Premake___](https://premake.github.io): The tool to configure the builds and build systems
  - [___Git___](https://git-scm.com): Version Control System
  - [___GitHub___](https://guthib.com): Online Git synchronisation and colaboration service
+ - [__MkDocs__](https://mkdocs.org): Static documentation site generation
+ - [__Material for MkDocs__](https://squidfunk.github.io/mkdocs-material): A theme for MkDocs
 
 ## Building
 For building the project refer to [___BUILDING.md___](BUILDING.md).
