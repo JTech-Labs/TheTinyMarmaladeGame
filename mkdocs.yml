@@ -7,10 +7,10 @@ copyright: The Tiny Marmalade Game Documentation &copy 2025 by JTech-Labs is lic
 extra:
   alternate:
     - name: English
-      link: /en/ 
+      link: /docs/en/ 
       lang: en
     - name: Español
-      link: /es/
+      link: /docs/es/
       lang: es
 # social:
 #   - icon: fontawesome/brands/mastodon
