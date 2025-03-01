@@ -66,18 +66,60 @@ int main(int argc, char *argv[]) {
 	Texture2D background = LoadTextureFromImage(backgroundImage);
 	UnloadImage(backgroundImage);
 
+	Rectangle backgroundSource = (Rectangle){0,0,background.width,background.height};
+	Rectangle backgroundDest = (Rectangle){0,0,GetScreenWidth(),GetScreenHeight()};
+
+	// The Welcome Screen
+	Image welcomeScreenImage = LoadImage("welcomeScreen.png");
+	Texture2D welcomeScreen = LoadTextureFromImage(welcomeScreenImage);
+	UnloadImage(welcomeScreenImage);
+
+	bool inADaBeningin = false; // TODO change to true for prod
+	int flipedTimer = 0;
+
 	// Marmalade jar
 	Image jarImage = LoadImage("jar.png");
 	Texture2D jar = LoadTextureFromImage(jarImage);
 	UnloadImage(jarImage);
 
+	struct jarPos {
+		int x;
+		int y;
+	} jarPos;
+	int jarTimer = 0;
+
+	int jarYTarget = backgroundDest.height/2 - 3*(backgroundDest.height/20);
+	int jarXStart = 16*(backgroundDest.width/20);
+	int jarXTarget = backgroundDest.width/20;
+
+	Rectangle jarSource = (Rectangle){0,0,jar.width,jar.height};
+
+	// Game Loop
 	while (!exitWindow) {
 
-		/// Manage Scene
+		// Manage Scene
 
+		if (inADaBeningin) {
+			if (IsKeyPressed(KEY_SPACE)){
+				inADaBeningin = !inADaBeningin;
+			}
+		}
 		
-
 		/// Update
+
+		// Marmalade Jar
+		if (jarTimer <= 10) {
+			jarPos.x = jarXStart;
+			jarPos.y = 0;
+		}
+		
+		// TODO: You left from here :)
+
+		if (jarPos.y <= jarYTarget) {
+			jarPos.y += jarTimer/10;
+		}
+
+		Rectangle jarDest = (Rectangle){jarPos.x,jarPos.y,jar.width/3,jar.height/3};
 
 		// Exit manager 
 		if (WindowShouldClose() && !IsKeyPressed(KEY_ESCAPE)) exitWindowReq = true;
@@ -97,10 +139,20 @@ int main(int argc, char *argv[]) {
 
 			ClearBackground(WHITE);
 			
-			DrawTexture(background, 0, 0, WHITE);
-			DrawTexture(jar, GetDisplayWidth()/2 - jar.width/2, GetDisplayHeight()/2 - jar.height/2, WHITE);
+			// The Background
+			DrawTexturePro(background, backgroundSource, backgroundDest, (Vector2){0,0}, 0, WHITE);
 
+			// The jar
+			DrawTexturePro(jar, jarSource, jarDest, (Vector2){0,0}, 0, WHITE);
 
+			if (inADaBeningin){
+				DrawTexture(welcomeScreen, GetDisplayWidth()/2 - welcomeScreen.width/2, GetDisplayHeight()/2 - welcomeScreen.height/2, WHITE);
+				flipedTimer++;
+				if (flipedTimer >= 50) {
+					DrawText("Press SPACE to begin", GetDisplayWidth()/2 - welcomeScreen.width/2, GetDisplayHeight()/2 + 2*(welcomeScreen.height/8), 100, ORANGE);
+					if (flipedTimer >= 100) flipedTimer = 0;
+				}
+			}
 
 			// Exit manager
 			if (exitWindowReq) {

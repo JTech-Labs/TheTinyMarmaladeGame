@@ -80,5 +80,24 @@
     "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
     "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"
   ],
-  "cmake.ignoreCMakeListsMissing": true
+  "cmake.ignoreCMakeListsMissing": true,
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "type": "text",
+    "foreground": "#ff0050",
+    "background": "#cccccc",
+    "opacity": 50,
+    "iconColour": "#0000ff"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "type": "line"
+    },
+    "FIXME": {
+      "foreground": "#ff00ff",
+      "iconColour": "#ffee00",
+      "gutterIcon": true
+    }
+  }
 }
