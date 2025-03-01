@@ -74,6 +74,3 @@ theme:
         toggle:
           icon: material/weather-night
           name: Switch to light mode
-
-nav:
-  
