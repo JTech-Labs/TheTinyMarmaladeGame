@@ -42,8 +42,8 @@ theme:
   icon:
     repo: fontawesome/brands/git-alt
 
-  logo: assets/ttm.png
-  favicon: assets/ttm.png
+  #logo: assets/ttm.png
+  #favicon: assets/ttm.png
 
   features:
     - search.suggest
