@@ -1,5 +1,8 @@
 # The Tiny Marmalade Game
 This is a small project made for [___The Tiny Marmalade Company___](https://thetinymarmalade.com), as a love letter to all they do. It is a fun, cosy yet often thrilling and exciting game inspired by the hard work the company puts into making all of their delicious product and putting them in those qute little jars.
+---
+[![docs](https://github.com/JTech-Labs/TheTinyMarmaladeGame/actions/workflows/docs.yml/badge.svg)](https://github.com/JTech-Labs/TheTinyMarmaladeGame/actions/workflows/docs.yml)
+---
 
 ## Technology
 There is a lot of technology used to make this game. We try to use as much Free and Open Source Software as possible, so other people can use the same technology we do to make their own wonderful projects, and to demonstrate that not much is needed to make something good (or even something ___*fantastic*___). Here is a list of what we use:
