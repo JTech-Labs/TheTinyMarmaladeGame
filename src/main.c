@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
 
 	SetTargetFPS(60);
 
-	Image icon = LoadImage("ttm.png");
+	Image icon = LoadImage("icon.png");
 	SetWindowIcon(icon);
 
 	// Textures
@@ -75,7 +75,7 @@ int main(int argc, char *argv[]) {
 
 		/// Manage Scene
 
-
+		
 
 		/// Update
 
@@ -97,8 +97,10 @@ int main(int argc, char *argv[]) {
 
 			ClearBackground(WHITE);
 			
-			DrawTexture(jar, GetDisplayWidth()/2 - jar.width/2, GetDisplayHeight()/2 - jar.height/2, WHITE);
 			DrawTexture(background, 0, 0, WHITE);
+			DrawTexture(jar, GetDisplayWidth()/2 - jar.width/2, GetDisplayHeight()/2 - jar.height/2, WHITE);
+
+
 
 			// Exit manager
 			if (exitWindowReq) {

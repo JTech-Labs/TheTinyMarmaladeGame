@@ -404,3 +404,7 @@ build_files
 raylib-master
 Makefile
 /*.sln
+
+# Site/Documentation
+[Ss]ite/
+[Vv]env/
