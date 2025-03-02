@@ -409,3 +409,16 @@ Makefile
 [Ss]ite/
 [Vv]env/
 [Ll]ib64/
+
+# Specifics
+build-MinGW-W64.bat
+build-VisualStudio2022.bat
+.vscode/
+.github/
+docs/
+mkdocs.yml
+pyproject.toml
+requirements.txt
+BUILDING.md
+LICENSE
+README.md
