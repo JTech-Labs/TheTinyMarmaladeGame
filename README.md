@@ -1,7 +1,12 @@
 # The Tiny Marmalade Game
 This is a small project made for [___The Tiny Marmalade Company___](https://thetinymarmalade.com), as a love letter to all they do. It is a fun, cosy yet often thrilling and exciting game inspired by the hard work the company puts into making all of their delicious product and putting them in those qute little jars.
+
 ---
 [![docs](https://github.com/JTech-Labs/TheTinyMarmaladeGame/actions/workflows/docs.yml/badge.svg)](https://github.com/JTech-Labs/TheTinyMarmaladeGame/actions/workflows/docs.yml)
+[![License](https://img.shields.io/github/license/JTech-Labs/TheTinyMarmaladeGame)](LICENCE)
+![Release](https://img.shields.io/github/v/release/JTech-Labs/TheTinyMarmaladeGame)
+
+
 ---
 
 ## Technology
