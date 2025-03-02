@@ -1,3 +1,8 @@
+LABEL org.opencontainers.image.licenses=GPL-3.0-or-later
+LABEL org.opencontainers.image.description="Container image for The Tiny Marmalade Game"
+LABEL org.opencontainers.image.source=https://github.com/JTech-Labs/TheTinyMArmaladeGame
+LABEL version="0.0.0"
+
 FROM ubuntu:latest
 RUN mkdir Game
 WORKDIR Game
