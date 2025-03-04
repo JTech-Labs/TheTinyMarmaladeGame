@@ -87,7 +87,7 @@ function platform_defines()
 end
 
 -- if you don't want to download raylib, then set this to false, and set the raylib dir to where you want raylib to be pulled from, must be full sources.
-downloadRaylib = true
+downloadExternals = true
 raylib_dir = "external/raylib-master"
 
 workspaceName = 'TheTinyMarmaladeGame'
@@ -131,7 +131,7 @@ workspace (workspaceName)
 
     targetdir "bin/%{cfg.buildcfg}/"
 
-if (downloadRaylib) then
+if (downloadExternals) then
     build_externals()
 	end
 
