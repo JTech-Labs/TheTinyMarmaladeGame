@@ -38,9 +38,29 @@ function check_raylib()
     os.chdir("../")
 end
 
+function check_wasm()
+    os.chdir("build")
+    if(os.isdir("emscripten") == false) then
+        if(not os.isfile("emscripten.zip")) then
+            print("Premake-Emscripten not found, downloading from github")
+            local result_str, response_code = http.download("https://github.com/tritao/premake-emscripten/archive/refs/heads/master.zip", "emscripten.zip", {
+                progress = download_progress,
+                headers = { "From: Premake", "Referer: Premake" }
+            })
+        end
+        print("Unzipping to " ..  os.getcwd())
+        zip.extract("emscripten.zip", os.getcwd())
+        os.remove("emscripten.zip")
+    end
+    os.chdir("../")
+end
+
+require "emscripten"
+
 function build_externals()
      print("calling externals")
      check_raylib()
+     check_wasm()
 end
 
 function platform_defines()
@@ -87,7 +107,7 @@ function platform_defines()
 end
 
 -- if you don't want to download raylib, then set this to false, and set the raylib dir to where you want raylib to be pulled from, must be full sources.
-downloadRaylib = true
+downloadExternals = true
 raylib_dir = "external/raylib-master"
 
 workspaceName = 'TheTinyMarmaladeGame'
@@ -109,7 +129,7 @@ end
 workspace (workspaceName)
     location "../"
     configurations { "Debug", "Release", "Debug_RGFW", "Release_RGFW"}
-    platforms { "x64", "x86", "ARM64"}
+    platforms { "x64", "x86", "ARM64", "wasm32", "wasm64"}
 
     defaultplatform ("x64")
 
@@ -127,11 +147,17 @@ workspace (workspaceName)
     filter { "platforms:Arm64" }
         architecture "ARM64"
 
+	filter { "platforms:wasm32" }
+		architecture "wasm32"
+
+	filter { "platforms:wasm64" }
+		architecture "wasm64"
+
     filter {}
 
     targetdir "bin/%{cfg.buildcfg}/"
 
-if (downloadRaylib) then
+if (downloadExternals) then
     build_externals()
 	end
 
