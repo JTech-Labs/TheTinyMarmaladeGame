@@ -55,6 +55,8 @@ function check_wasm()
     os.chdir("../")
 end
 
+require "emscripten"
+
 function build_externals()
      print("calling externals")
      check_raylib()
