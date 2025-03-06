@@ -38,9 +38,27 @@ function check_raylib()
     os.chdir("../")
 end
 
+function check_wasm()
+    os.chdir("build")
+    if(os.isdir("emscripten") == false) then
+        if(not os.isfile("emscripten.zip")) then
+            print("Premake-Emscripten not found, downloading from github")
+            local result_str, response_code = http.download("https://github.com/tritao/premake-emscripten/archive/refs/heads/master.zip", "emscripten.zip", {
+                progress = download_progress,
+                headers = { "From: Premake", "Referer: Premake" }
+            })
+        end
+        print("Unzipping to " ..  os.getcwd())
+        zip.extract("emscripten.zip", os.getcwd())
+        os.remove("emscripten.zip")
+    end
+    os.chdir("../")
+end
+
 function build_externals()
      print("calling externals")
      check_raylib()
+     check_wasm()
 end
 
 function platform_defines()
@@ -109,7 +127,7 @@ end
 workspace (workspaceName)
     location "../"
     configurations { "Debug", "Release", "Debug_RGFW", "Release_RGFW"}
-    platforms { "x64", "x86", "ARM64"}
+    platforms { "x64", "x86", "ARM64", "wasm32", "wasm64"}
 
     defaultplatform ("x64")
 
@@ -126,6 +144,12 @@ workspace (workspaceName)
 
     filter { "platforms:Arm64" }
         architecture "ARM64"
+
+	filter { "platforms:wasm32" }
+		architecture "wasm32"
+
+	filter { "platforms:wasm64" }
+		architecture "wasm64"
 
     filter {}
 
