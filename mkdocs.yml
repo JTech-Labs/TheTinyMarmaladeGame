@@ -3,7 +3,8 @@ site_url: https://jtech-labs.github.io/TheTinyMarmaladeGame
 repo_url: https://github.com/JTech-Labs/TheTinyMarmaladeGame
 repo_name: TheTinyMarmaladeGame
 docs_dir: docs
-copyright: The Tiny Marmalade Game Documentation &copy 2025 by JTech-Labs is licensed under CC BY-NC-SA 4.0 
+copyright: The Tiny Marmalade Game Documentation &copy 2025 by JTech-Labs is licensed under CC BY-NC-SA 4.0
+remote_branch: pages
 
 extra:
   alternate:
