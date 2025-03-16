@@ -39,6 +39,7 @@ function check_raylib()
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function check_wasm()
     os.chdir("build")
@@ -58,6 +59,8 @@ function check_wasm()
 end
 
 >>>>>>> parent of 1386f54 (Update premake5.lua)
+=======
+>>>>>>> parent of 2bb4c50 (add wasm to premake)
 function build_externals()
      print("calling externals")
      check_raylib()
