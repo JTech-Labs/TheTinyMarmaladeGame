@@ -38,6 +38,8 @@ function check_raylib()
     os.chdir("../")
 end
 
+<<<<<<< HEAD
+=======
 function check_wasm()
     os.chdir("build")
     if(os.isdir("emscripten") == false) then
@@ -55,12 +57,10 @@ function check_wasm()
     os.chdir("../")
 end
 
-require "emscripten"
-
+>>>>>>> parent of 1386f54 (Update premake5.lua)
 function build_externals()
      print("calling externals")
      check_raylib()
-     check_wasm()
 end
 
 function platform_defines()
@@ -107,7 +107,7 @@ function platform_defines()
 end
 
 -- if you don't want to download raylib, then set this to false, and set the raylib dir to where you want raylib to be pulled from, must be full sources.
-downloadExternals = true
+downloadRaylib = true
 raylib_dir = "external/raylib-master"
 
 workspaceName = 'TheTinyMarmaladeGame'
@@ -129,7 +129,7 @@ end
 workspace (workspaceName)
     location "../"
     configurations { "Debug", "Release", "Debug_RGFW", "Release_RGFW"}
-    platforms { "x64", "x86", "ARM64", "wasm32", "wasm64"}
+    platforms { "x64", "x86", "ARM64"}
 
     defaultplatform ("x64")
 
@@ -147,17 +147,11 @@ workspace (workspaceName)
     filter { "platforms:Arm64" }
         architecture "ARM64"
 
-	filter { "platforms:wasm32" }
-		architecture "wasm32"
-
-	filter { "platforms:wasm64" }
-		architecture "wasm64"
-
     filter {}
 
     targetdir "bin/%{cfg.buildcfg}/"
 
-if (downloadExternals) then
+if (downloadRaylib) then
     build_externals()
 	end
 

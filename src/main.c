@@ -20,8 +20,6 @@ You should have received a copy of the GNU General Public License along with The
 
 //Import our own headers for functions from different files
 #include "../include/baseCommands.h"
-#include "../include/looper.h"
-#include "../include/setup.h"
 #include "../include/resourceDir.h"	// utility header for SearchAndSetResourceDir (part of the raylib-quickstart template)
 
 /// The all important main function
@@ -58,7 +56,43 @@ int main(int argc, char *argv[]) {
 	Image icon = LoadImage("icon.png");
 	SetWindowIcon(icon);
 
-	initSetup();
+	// Textures
+	
+	// Wabbit
+	Texture2D wabbit = LoadTexture("wabbitAlpha.png");
+	
+	// The background
+	Image backgroundImage = LoadImage("background.png");
+	Texture2D background = LoadTextureFromImage(backgroundImage);
+	UnloadImage(backgroundImage);
+
+	Rectangle backgroundSource = (Rectangle){0,0,background.width,background.height};
+	Rectangle backgroundDest = (Rectangle){0,0,GetScreenWidth(),GetScreenHeight()};
+
+	// The Welcome Screen
+	Image welcomeScreenImage = LoadImage("welcomeScreen.png");
+	Texture2D welcomeScreen = LoadTextureFromImage(welcomeScreenImage);
+	UnloadImage(welcomeScreenImage);
+
+	bool inADaBeningin = false; // TODO change to true for prod
+	int flipedTimer = 0;
+
+	// Marmalade jar
+	Image jarImage = LoadImage("jar.png");
+	Texture2D jar = LoadTextureFromImage(jarImage);
+	UnloadImage(jarImage);
+
+	struct jarPos {
+		int x;
+		int y;
+	} jarPos;
+	int jarTimer = 0;
+
+	int jarYTarget = backgroundDest.height/2 - 3*(backgroundDest.height/20);
+	int jarXStart = 16*(backgroundDest.width/20);
+	int jarXTarget = backgroundDest.width/20;
+
+	Rectangle jarSource = (Rectangle){0,0,jar.width,jar.height};
 
 	// Game Loop
 	while (!exitWindow) {
@@ -70,12 +104,22 @@ int main(int argc, char *argv[]) {
 				inADaBeningin = !inADaBeningin;
 			}
 		}
-
+		
 		/// Update
 
-		sceneUpdateStruct theScene = sceneUpdate();
-		jarDest = theScene.Rectangle;
-    	jarPos = theScene.jarPos;
+		// Marmalade Jar
+		if (jarTimer <= 10) {
+			jarPos.x = jarXStart;
+			jarPos.y = 0;
+		}
+		
+		// TODO: You left from here :)
+
+		if (jarPos.y <= jarYTarget) {
+			jarPos.y += jarTimer/10;
+		}
+
+		Rectangle jarDest = (Rectangle){jarPos.x,jarPos.y,jar.width/3,jar.height/3};
 
 		// Exit manager 
 		if (WindowShouldClose() && !IsKeyPressed(KEY_ESCAPE)) exitWindowReq = true;
