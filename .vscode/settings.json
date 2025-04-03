@@ -85,7 +85,7 @@
     "icon": "alert",
     "type": "text",
     "foreground": "#ff0050",
-    "background": "#cccccc",
+    "background": "#ffffff",
     "opacity": 50,
     "iconColour": "#0000ff"
   },

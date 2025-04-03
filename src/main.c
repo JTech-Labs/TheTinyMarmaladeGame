@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 	
 	/// Initialisation
 
-	SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
+	SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI | FLAG_WINDOW_RESIZABLE);
 	SearchAndSetResourceDir("assets/images");
 
 	// Init variables
@@ -169,6 +169,8 @@ int main(int argc, char *argv[]) {
 	UnloadTexture(wabbit);
 	UnloadTexture(background);
 	UnloadImage(icon);
+	UnloadTexture(jar);
+	UnloadTexture(welcomeScreen);
 
 	// Return with no errors unless previously stated otherwise
 	return 0;

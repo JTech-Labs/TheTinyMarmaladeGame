@@ -38,29 +38,6 @@ function check_raylib()
     os.chdir("../")
 end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-function check_wasm()
-    os.chdir("build")
-    if(os.isdir("emscripten") == false) then
-        if(not os.isfile("emscripten.zip")) then
-            print("Premake-Emscripten not found, downloading from github")
-            local result_str, response_code = http.download("https://github.com/tritao/premake-emscripten/archive/refs/heads/master.zip", "emscripten.zip", {
-                progress = download_progress,
-                headers = { "From: Premake", "Referer: Premake" }
-            })
-        end
-        print("Unzipping to " ..  os.getcwd())
-        zip.extract("emscripten.zip", os.getcwd())
-        os.remove("emscripten.zip")
-    end
-    os.chdir("../")
-end
-
->>>>>>> parent of 1386f54 (Update premake5.lua)
-=======
->>>>>>> parent of 2bb4c50 (add wasm to premake)
 function build_externals()
      print("calling externals")
      check_raylib()
@@ -113,7 +90,7 @@ end
 downloadRaylib = true
 raylib_dir = "external/raylib-master"
 
-workspaceName = 'TheTinyMarmaladeGame'
+workspaceName = 'MyGame'
 baseName = path.getbasename(path.getdirectory(os.getcwd()));
 
 --if (baseName ~= 'raylib-quickstart') then
