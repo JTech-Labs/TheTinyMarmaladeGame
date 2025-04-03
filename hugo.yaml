@@ -1,0 +1,35 @@
+baseURL: 'https://jtech-labs.codeberg.page/TheTinyMarmaladeGame'
+languageCode: 'en-gb'
+title: 'The Tiny Marmalade Game'
+theme: 'hugo-book'
+
+module:
+  imports:
+    path: 'github.com/alex-shpak/hugo-book'
+
+languages:
+  en:
+    languageName: English
+    contentDir: content/en
+    weight: 1
+  es:
+    languageName: Spanish
+    contentDir: content/es
+    weight: 1
+
+
+menu:
+  # before: []
+  after:
+    - name: "Github"
+      url: "https://codeberg.org/JTech-Labs/TheTinyMarmaladeGame"
+      weight: 10
+
+params:
+  BookTheme: "auto"
+  BookToC: true
+  BookFavicon: "favicon.png"
+  BookLogo: favicon.png
+  BookSection: docs
+  BookRepo: https://codeberg.org/JTech-Labs/TheTinyMarmaladeGame
+  BookSearch: true
