@@ -8,8 +8,8 @@ This is a small project made for [___The Tiny Marmalade Company___](https://thet
 [![License](https://img.shields.io/github/license/JTech-Labs/TheTinyMarmaladeGame)](LICENCE)
 ![Release](https://img.shields.io/github/v/release/JTech-Labs/TheTinyMarmaladeGame)
 
-
 ---
+Please also check the [___Game Design Document___](GameDesignDocument.TEMPLATE.odt) (Work In Progress) (in Open Document Format) for a more in-depth overview for what the game is about.
 
 ## Technology
 There is a lot of technology used to make this game. We try to use as much Free and Open Source Software as possible, so other people can use the same technology we do to make their own wonderful projects, and to demonstrate that not much is needed to make something good (or even something ___*fantastic*___). Here is a list of what we use:
