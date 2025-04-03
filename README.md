@@ -43,3 +43,21 @@ This game is made out of several components, each with their own licences, pleas
 (c) 2025 JTech-Labs
 
 All assets *CC BY-NC 4.0*
+
+<!-->IDEA:
+
+ Tiny Marmalade: Marmalade Madness
+
+    Genre: Arcade / Action
+
+    Gameplay: A fast-paced arcade game where you run a tiny marmalade shop. Players must quickly prepare orders, mix fruit, pour into jars, and send them out to customers before time runs out. The challenge increases as customers get more specific about their marmalade preferences, and some might even demand bizarre combinations (strawberry-rhubarb-vanilla-mango-marmalade, anyone?). Players must also balance inventory, upgrade their shop, and avoid marmalade mishaps (like spills or fires).
+
+    Features:
+
+        Whimsical customers with unique personalities and demanding orders.
+
+        Jam-making minigames (like stirring the jam pot, packing jars, or creating special flavors).
+
+        Power-ups like faster stirring or automatic jar-filling for a limited time.
+
+        Seasonal events (e.g., Christmas jams, summer fruit festivals).
